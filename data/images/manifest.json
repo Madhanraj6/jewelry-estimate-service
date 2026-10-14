@@ -1,395 +1,518 @@
 {
   "entries": {
     "BRC-001": {
-      "bytes": 21200,
+      "attribution": "",
+      "bytes": 76322,
+      "catalog_url": "https://pachchigarjewellers.com/products/22k-gold-rudraksha-bracelet",
       "image_is_unique": true,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "34a91ce5c37f9b9eac2e1a397333bc24ab4a33d34d2711bc01365c4d9b8de297",
-      "shared_with": [],
-      "source": "synthetic",
-      "status": "synthetic"
+      "notes": "",
+      "resolved_via": "scraped from product page (http://pachchigarjewellers.com/cdn/shop/files/Classic_Rudraksha_Gold_Bracelet.jpg?v=1788348743)",
+      "sha256": "602671a20f9f2e550870deca46d957fd5ca153df38b00427d242e003fc057405",
+      "sku": "BRC-001",
+      "source_url": "https://pachchigarjewellers.com/products/22k-gold-rudraksha-bracelet",
+      "status": "ok"
     },
     "BRC-002": {
-      "bytes": 20900,
+      "attribution": "",
+      "bytes": 48516,
+      "catalog_url": "https://palmonas.com/products/diamond-studded-ring-18k-gold-plated-74162",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "b63757d06a2630caa2620fff0f83cfcad2e238c7401b22c87c2970fdbac2a014",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "969d6998a416061ecf8bac47052fc0f3dc7255c89ea18ac8f45637f4259ad5a2",
       "shared_with": [
         "NCK-002",
         "RNG-001"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "BRC-002",
+      "source_url": "https://palmonas.com/products/diamond-studded-ring-18k-gold-plated-74162",
+      "status": "ok"
     },
     "BRC-003": {
-      "bytes": 16523,
+      "attribution": "",
+      "bytes": 195972,
+      "catalog_url": "https://tribalornaments.com/products/1-5mm-925-sterling-silver-chain-plain-bright-silver-trendy-style-boys-girls-chain-ch595",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "b126527a154cf5e7dfdff159a88f6b2260c3e6e771fcda094d1c9ebab5f7f508",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "41594a5a9c3145b75ee56a9346db8143b45202be54f071d3212150b4bb24ae15",
       "shared_with": [
         "CHN-003",
         "NCK-003"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "BRC-003",
+      "source_url": "https://tribalornaments.com/products/1-5mm-925-sterling-silver-chain-plain-bright-silver-trendy-style-boys-girls-chain-ch595",
+      "status": "ok"
     },
     "BRC-004": {
-      "bytes": 16769,
+      "attribution": "",
+      "bytes": 53476,
+      "catalog_url": "https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "acc386d240a3b24151003ae5a5c827a68241568a088179c433b6429b1b5d7a8a",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "bb5379ffff61dd3de1983365cdf442948f61c0ce9690fefae6af7ccf453c31d1",
       "shared_with": [
         "NCK-004",
         "PEN-002",
         "RNG-004"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "BRC-004",
+      "source_url": "https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052",
+      "status": "ok"
     },
     "BRC-005": {
-      "bytes": 21090,
-      "image_is_unique": true,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "9cffe0b021682c2796d39eb9375ac46de127884290bba8f288bb1d86c83903c0",
-      "shared_with": [],
-      "source": "synthetic",
-      "status": "synthetic"
+      "attribution": "",
+      "bytes": 169352,
+      "catalog_url": "https://samnsue.com/products/the-drenched-oval-morganite-ring-9x7mm-14k-rose-gold",
+      "image_is_unique": false,
+      "notes": "",
+      "resolved_via": "scraped from product page (http://www.samnsue.com/cdn/shop/files/oval-morganite-diamond-halo-drenched-rose-gold-1.jpg?v=1751490427&width=2048)",
+      "sha256": "c988319343daa66b3383c26d1e4eb92cc15dc9bb8fd857af28032173e9c06e1a",
+      "shared_with": [
+        "RNG-006"
+      ],
+      "sku": "BRC-005",
+      "source_url": "https://samnsue.com/products/the-drenched-oval-morganite-ring-9x7mm-14k-rose-gold",
+      "status": "ok"
     },
     "BRC-006": {
-      "bytes": 16120,
+      "attribution": "",
+      "bytes": 144870,
+      "catalog_url": "https://gemsrush.in/products/amethyst-ring",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "5bd71dcf061412a1a6275a9a9b3c6a41269b186e763cf4788b09347244a1b661",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "728084a94a0d53f1ff14fe3691cc6b49ee9448a5237bdb2a9db681bf254b7d09",
       "shared_with": [
         "RNG-003"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "BRC-006",
+      "source_url": "https://gemsrush.in/products/amethyst-ring",
+      "status": "ok"
     },
     "BRC-007": {
-      "bytes": 16523,
-      "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "b126527a154cf5e7dfdff159a88f6b2260c3e6e771fcda094d1c9ebab5f7f508",
-      "shared_with": [
-        "CHN-007"
-      ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "attribution": "https://commons.wikimedia.org/wiki/File:Modern_white_metal_and_layered_chalcedony_hinged_bracelet_(FindID_1017837).jpg | CC BY 2.0",
+      "bytes": 138709,
+      "catalog_url": "https://www.tatacliq.com/clara-925-silver-platinum-plated-swiss-zircon-black-onyx-pendant-with-chain/p-mp000000023348311",
+      "image_is_unique": true,
+      "notes": "catalog URL failed: ValueError: no product image found on the page; tried 0 candidates. ; fell back to Wikimedia Commons; source File:Modern white metal and layered chalcedony hinged bracelet (FindID 1017837).jpg",
+      "resolved_via": "direct image",
+      "sha256": "fceed2e94ed22545e67aa9885524749e9f799625270a04fe2851ea585febe78a",
+      "sku": "BRC-007",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Modern_white_metal_and_layered_chalcedony_hinged_bracelet_%28FindID_1017837%29.jpg/1280px-Modern_white_metal_and_layered_chalcedony_hinged_bracelet_%28FindID_1017837%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "status": "ok"
     },
     "BRC-008": {
-      "bytes": 18965,
+      "attribution": "",
+      "bytes": 215965,
+      "catalog_url": "https://girirajjewellers.co.in/gold-chains/men-s-gold-chains/udarsh-22k-gold-chain-for-men",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "6818792a3fa08a91e9f4ea0cfae84a41476002eefb3266830b45dea154c9f33c",
       "shared_with": [
         "CHN-001",
         "NCK-008"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "BRC-008",
+      "source_url": "https://girirajjewellers.co.in/gold-chains/men-s-gold-chains/udarsh-22k-gold-chain-for-men",
+      "status": "ok"
     },
     "CHN-001": {
-      "bytes": 18965,
+      "attribution": "",
+      "bytes": 215965,
+      "catalog_url": "https://girirajjewellers.co.in/gold-chains/men-s-gold-chains/udarsh-22k-gold-chain-for-men",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
+      "notes": "",
+      "resolved_via": "scraped from product page (https://d25g9z9s77rn4i.cloudfront.net/uploads/product/1104/1656317614_09f522be5a3d47943bf9.png)",
+      "sha256": "6818792a3fa08a91e9f4ea0cfae84a41476002eefb3266830b45dea154c9f33c",
       "shared_with": [
         "BRC-008",
         "NCK-008"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "CHN-001",
+      "source_url": "https://girirajjewellers.co.in/gold-chains/men-s-gold-chains/udarsh-22k-gold-chain-for-men",
+      "status": "ok"
     },
     "CHN-002": {
-      "bytes": 18965,
+      "attribution": "https://commons.wikimedia.org/wiki/File:Four_18K_gold_chains.jpg | CC BY 4.0",
+      "bytes": 173614,
+      "catalog_url": "https://www.etsy.com/in-en/listing/1528498974/18k-solid-gold-rope-chain-necklace",
       "image_is_unique": true,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
-      "shared_with": [],
-      "source": "synthetic",
-      "status": "synthetic"
+      "notes": "catalog URL failed: HTTPError: HTTP Error 403: Forbidden; fell back to Wikimedia Commons; source File:Four 18K gold chains.jpg",
+      "resolved_via": "direct image",
+      "sha256": "79ee61313e830d1e8e4f1dd3cae5933586476af148ede221e494c60e33492698",
+      "sku": "CHN-002",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Four_18K_gold_chains.jpg/1280px-Four_18K_gold_chains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "status": "ok"
     },
     "CHN-003": {
-      "bytes": 16523,
+      "attribution": "",
+      "bytes": 195972,
+      "catalog_url": "https://tribalornaments.com/products/1-5mm-925-sterling-silver-chain-plain-bright-silver-trendy-style-boys-girls-chain-ch595",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "b126527a154cf5e7dfdff159a88f6b2260c3e6e771fcda094d1c9ebab5f7f508",
+      "notes": "",
+      "resolved_via": "scraped from product page (http://tribalornaments.com/cdn/shop/files/tribal-ornaments-default-title-24-inches-1-5mm-handmade-unique-chain-925-sterl)",
+      "sha256": "41594a5a9c3145b75ee56a9346db8143b45202be54f071d3212150b4bb24ae15",
       "shared_with": [
         "BRC-003",
         "NCK-003"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "CHN-003",
+      "source_url": "https://tribalornaments.com/products/1-5mm-925-sterling-silver-chain-plain-bright-silver-trendy-style-boys-girls-chain-ch595",
+      "status": "ok"
     },
     "CHN-004": {
-      "bytes": 16707,
+      "attribution": "https://commons.wikimedia.org/wiki/File:Necklace_with_cameo_of_Veronica%27s_Veil_MET_DP-12990-001.jpg | CC0",
+      "bytes": 76301,
+      "catalog_url": "https://www.tatacliq.com/joyalukkas-magnetic-950-platinum-chain/p-mp000000021201910",
       "image_is_unique": true,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "4d9b2a9f83d2d4686b227bf55054d68e41af40b70b914a274bf3c6622854801b",
-      "shared_with": [],
-      "source": "synthetic",
-      "status": "synthetic"
+      "notes": "catalog URL failed: ValueError: no product image found on the page; tried 0 candidates. ; fell back to Wikimedia Commons; source File:Necklace with cameo of Veronica's Veil MET DP-12990-001.jpg",
+      "resolved_via": "direct image",
+      "sha256": "b05c000c20d43e766d2374dc0f087f20c41d7a39cc3e5d5d8837b329bfb505a2",
+      "sku": "CHN-004",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Necklace_with_cameo_of_Veronica%27s_Veil_MET_DP-12990-001.jpg/1280px-Necklace_with_cameo_of_Veronica%27s_Veil_MET_DP-12990-001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "status": "ok"
     },
     "CHN-005": {
-      "bytes": 18315,
+      "attribution": "",
+      "bytes": 61928,
+      "catalog_url": "https://caratly.in/products/gold-chain-1",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "c7085a2ecc34d6fe3011a993641deb5c11dfa81e215d94dbc301112a3adab6d4",
+      "notes": "",
+      "resolved_via": "scraped from product page (http://caratly.in/cdn/shop/files/0W8A4088_1.jpg?v=1712928077)",
+      "sha256": "e9c37535baee9b2b6dca4cc631480a17ea02b91db5f26ba64907b0810821cb82",
       "shared_with": [
         "NCK-005"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "CHN-005",
+      "source_url": "https://caratly.in/products/gold-chain-1",
+      "status": "ok"
     },
     "CHN-006": {
-      "bytes": 18965,
-      "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
-      "shared_with": [
-        "NCK-006"
-      ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "attribution": "https://commons.wikimedia.org/wiki/File:16th_century_gold_chain_length_comparison.jpg | CC BY-SA 3.0",
+      "bytes": 85912,
+      "catalog_url": "https://www.etsy.com/in-en/listing/1481497760/14k-yellow-gold-rope-chain-necklace",
+      "image_is_unique": true,
+      "notes": "catalog URL failed: HTTPError: HTTP Error 403: Forbidden; fell back to Wikimedia Commons; source File:16th century gold chain length comparison.jpg",
+      "resolved_via": "direct image",
+      "sha256": "f0c3aa52fe8077c986b6e3f7110f8abe2aa8add0b44d5fa9243e88de6624ba37",
+      "sku": "CHN-006",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/16th_century_gold_chain_length_comparison.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "status": "ok"
     },
     "CHN-007": {
-      "bytes": 16523,
-      "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "b126527a154cf5e7dfdff159a88f6b2260c3e6e771fcda094d1c9ebab5f7f508",
-      "shared_with": [
-        "BRC-007"
-      ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "attribution": "https://commons.wikimedia.org/wiki/File:Black_Onyx_Necklace.jpg | CC BY-SA 3.0",
+      "bytes": 70615,
+      "catalog_url": "https://www.tatacliq.com/clara-925-silver-platinum-plated-swiss-zircon-black-onyx-pendant-with-chain/p-mp000000023348311",
+      "image_is_unique": true,
+      "notes": "catalog URL failed: ValueError: no product image found on the page; tried 0 candidates. ; fell back to Wikimedia Commons; source File:Black Onyx Necklace.jpg",
+      "resolved_via": "direct image",
+      "sha256": "e04b5d8ac7af733fca30957596165875d516dcc6595181a9cdd9391678429c57",
+      "sku": "CHN-007",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Black_Onyx_Necklace.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "status": "ok"
     },
     "CHN-008": {
-      "bytes": 18965,
+      "attribution": "",
+      "bytes": 159212,
+      "catalog_url": "https://tdfjewellery.com/product/suvrata-22-kt-closesetting-diamond-necklace",
       "image_is_unique": true,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
-      "shared_with": [],
-      "source": "synthetic",
-      "status": "synthetic"
+      "notes": "",
+      "resolved_via": "scraped from product page (https://tdfjewellery.com/wp-content/uploads/2025/10/DJ-NK-NOR-00328-2_1-1.jpg)",
+      "sha256": "65f741a8f77fe9505b634c3c0718c0b8b141a053b92f8d02abc14b6f47ecae6e",
+      "sku": "CHN-008",
+      "source_url": "https://tdfjewellery.com/product/suvrata-22-kt-closesetting-diamond-necklace",
+      "status": "ok"
     },
     "EAR-001": {
-      "bytes": 19584,
+      "attribution": "https://commons.wikimedia.org/wiki/File:Gold_earrings_with_diamonds,_garnets,_citrines_and_aquamarines_on_a_cucumber_by_ASQ.jpg | CC BY 4.0",
+      "bytes": 196864,
+      "catalog_url": "https://www.gehnaindia.com/blooming-grown-diamond-14k-gold-petal-stud-earrings",
       "image_is_unique": true,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "2888f90904f396279a3467875d93879affb4022e5f95cc23e54d2854f29b0126",
-      "shared_with": [],
-      "source": "synthetic",
-      "status": "synthetic"
+      "notes": "catalog URL failed: ValueError: no product image found on the page; tried 0 candidates. ; fell back to Wikimedia Commons; source File:Gold earrings with diamonds, garnets, citrines and aquamarines on a cucumber by ASQ.jpg",
+      "resolved_via": "direct image",
+      "sha256": "7cb25dab23e116184750b64192180d3af0027871637522c71e6092e09cc2dd21",
+      "sku": "EAR-001",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Gold_earrings_with_diamonds%2C_garnets%2C_citrines_and_aquamarines_on_a_cucumber_by_ASQ.jpg/1280px-Gold_earrings_with_diamonds%2C_garnets%2C_citrines_and_aquamarines_on_a_cucumber_by_ASQ.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "status": "ok"
     },
     "EAR-002": {
-      "bytes": 21320,
+      "attribution": "",
+      "bytes": 88358,
+      "catalog_url": "https://krishnapearls.com/products/22k-gold-pearl-necklace-and-earrings-set",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "5654e85b468364768d492360c9443deb18932042562e46ad01d5300e2f2468d2",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "4a7401998ddb70a6cfb88e2fe280021167a9d270380b0ac0137018a883d7c438",
       "shared_with": [
         "NCK-001"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "EAR-002",
+      "source_url": "https://krishnapearls.com/products/22k-gold-pearl-necklace-and-earrings-set",
+      "status": "ok"
     },
     "NCK-001": {
-      "bytes": 21320,
+      "attribution": "",
+      "bytes": 88358,
+      "catalog_url": "https://krishnapearls.com/products/22k-gold-pearl-necklace-and-earrings-set",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "5654e85b468364768d492360c9443deb18932042562e46ad01d5300e2f2468d2",
+      "notes": "",
+      "resolved_via": "scraped from product page (http://krishnapearls.com/cdn/shop/files/Pearl_bcc101f0-2a5d-4cbd-ae0c-da44e88fb405.jpg?crop=center&height=1200&v=1744111)",
+      "sha256": "4a7401998ddb70a6cfb88e2fe280021167a9d270380b0ac0137018a883d7c438",
       "shared_with": [
         "EAR-002"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "NCK-001",
+      "source_url": "https://krishnapearls.com/products/22k-gold-pearl-necklace-and-earrings-set",
+      "status": "ok"
     },
     "NCK-002": {
-      "bytes": 20900,
+      "attribution": "",
+      "bytes": 48516,
+      "catalog_url": "https://palmonas.com/products/diamond-studded-ring-18k-gold-plated-74162",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "b63757d06a2630caa2620fff0f83cfcad2e238c7401b22c87c2970fdbac2a014",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "969d6998a416061ecf8bac47052fc0f3dc7255c89ea18ac8f45637f4259ad5a2",
       "shared_with": [
         "BRC-002",
         "RNG-001"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "NCK-002",
+      "source_url": "https://palmonas.com/products/diamond-studded-ring-18k-gold-plated-74162",
+      "status": "ok"
     },
     "NCK-003": {
-      "bytes": 16523,
+      "attribution": "",
+      "bytes": 195972,
+      "catalog_url": "https://tribalornaments.com/products/1-5mm-925-sterling-silver-chain-plain-bright-silver-trendy-style-boys-girls-chain-ch595",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "b126527a154cf5e7dfdff159a88f6b2260c3e6e771fcda094d1c9ebab5f7f508",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "41594a5a9c3145b75ee56a9346db8143b45202be54f071d3212150b4bb24ae15",
       "shared_with": [
         "BRC-003",
         "CHN-003"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "NCK-003",
+      "source_url": "https://tribalornaments.com/products/1-5mm-925-sterling-silver-chain-plain-bright-silver-trendy-style-boys-girls-chain-ch595",
+      "status": "ok"
     },
     "NCK-004": {
-      "bytes": 16769,
+      "attribution": "",
+      "bytes": 53476,
+      "catalog_url": "https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "acc386d240a3b24151003ae5a5c827a68241568a088179c433b6429b1b5d7a8a",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "bb5379ffff61dd3de1983365cdf442948f61c0ce9690fefae6af7ccf453c31d1",
       "shared_with": [
         "BRC-004",
         "PEN-002",
         "RNG-004"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "NCK-004",
+      "source_url": "https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052",
+      "status": "ok"
     },
     "NCK-005": {
-      "bytes": 18315,
+      "attribution": "",
+      "bytes": 61928,
+      "catalog_url": "https://caratly.in/products/gold-chain-1",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "c7085a2ecc34d6fe3011a993641deb5c11dfa81e215d94dbc301112a3adab6d4",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "e9c37535baee9b2b6dca4cc631480a17ea02b91db5f26ba64907b0810821cb82",
       "shared_with": [
         "CHN-005"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "NCK-005",
+      "source_url": "https://caratly.in/products/gold-chain-1",
+      "status": "ok"
     },
     "NCK-006": {
-      "bytes": 18965,
-      "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
-      "shared_with": [
-        "CHN-006"
-      ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "attribution": "https://commons.wikimedia.org/wiki/File:Necklace_MET_DP342239.jpg | CC0",
+      "bytes": 65006,
+      "catalog_url": "https://www.etsy.com/in-en/listing/1481497760/14k-yellow-gold-rope-chain-necklace",
+      "image_is_unique": true,
+      "notes": "catalog URL failed: HTTPError: HTTP Error 403: Forbidden; fell back to Wikimedia Commons; source File:Necklace MET DP342239.jpg",
+      "resolved_via": "direct image",
+      "sha256": "baa2f0643dc12de1101d4f4ae4d4fe94284b030f2c6986bf45c14196d66b487b",
+      "sku": "NCK-006",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Necklace_MET_DP342239.jpg/1280px-Necklace_MET_DP342239.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "status": "ok"
     },
     "NCK-007": {
-      "bytes": 15980,
-      "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "832f23fbea0c0bbc8db42fe6fd24f7ef53ad795a82f2ece726a0c1613f43a2d7",
-      "shared_with": [
-        "RNG-007"
-      ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "attribution": "https://commons.wikimedia.org/wiki/File:Silver_necklace_and_cauliflower_by_ASQ.jpg | CC BY 4.0",
+      "bytes": 189613,
+      "catalog_url": "https://www.tatacliq.com/mia-by-tanishq-925-sterling-silver-ring-for-women",
+      "image_is_unique": true,
+      "notes": "catalog URL failed: ValueError: no product image found on the page; tried 0 candidates. ; fell back to Wikimedia Commons; source File:Silver necklace and cauliflower by ASQ.jpg",
+      "resolved_via": "direct image",
+      "sha256": "de7a99ef62f21ffcd325e6c3683bb548608db6cb441a5b565e5e83cb4f5d3b78",
+      "sku": "NCK-007",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Silver_necklace_and_cauliflower_by_ASQ.jpg/1280px-Silver_necklace_and_cauliflower_by_ASQ.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "status": "ok"
     },
     "NCK-008": {
-      "bytes": 18965,
+      "attribution": "",
+      "bytes": 215965,
+      "catalog_url": "https://girirajjewellers.co.in/gold-chains/men-s-gold-chains/udarsh-22k-gold-chain-for-men",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "6818792a3fa08a91e9f4ea0cfae84a41476002eefb3266830b45dea154c9f33c",
       "shared_with": [
         "BRC-008",
         "CHN-001"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "NCK-008",
+      "source_url": "https://girirajjewellers.co.in/gold-chains/men-s-gold-chains/udarsh-22k-gold-chain-for-men",
+      "status": "ok"
     },
     "PEN-001": {
-      "bytes": 25847,
+      "attribution": "",
+      "bytes": 62361,
+      "catalog_url": "https://www.bhimagold.com/products/traditionally-crafted-blue-sapphire-studded-22kt-gold-pendant-for-women-ngo-chlc-s-67017",
       "image_is_unique": true,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "948f287a7504afbbdf7e1383744ea5744caaaedcf7b947325e3fd2f738d3da18",
-      "shared_with": [],
-      "source": "synthetic",
-      "status": "synthetic"
+      "notes": "",
+      "resolved_via": "scraped from product page (https://images.bhimagold.com/products/pendants/images/0b80003c-7157-4bd3-8f5f-83398ec5496e-NGO-CHLC--S-67017.webp)",
+      "sha256": "f904240cb9cb7f5a8bbd93f0d3698b7a7afc9a9c032bffe3360cd6111b558f64",
+      "sku": "PEN-001",
+      "source_url": "https://www.bhimagold.com/products/traditionally-crafted-blue-sapphire-studded-22kt-gold-pendant-for-women-ngo-chlc-s-67017",
+      "status": "ok"
     },
     "PEN-002": {
-      "bytes": 16769,
+      "attribution": "",
+      "bytes": 53476,
+      "catalog_url": "https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "acc386d240a3b24151003ae5a5c827a68241568a088179c433b6429b1b5d7a8a",
+      "notes": "reused an identical catalog URL from another SKU",
+      "resolved_via": "reused",
+      "sha256": "bb5379ffff61dd3de1983365cdf442948f61c0ce9690fefae6af7ccf453c31d1",
       "shared_with": [
         "BRC-004",
         "NCK-004",
         "RNG-004"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "PEN-002",
+      "source_url": "https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052",
+      "status": "ok"
     },
     "RNG-001": {
-      "bytes": 20900,
+      "attribution": "",
+      "bytes": 48516,
+      "catalog_url": "https://palmonas.com/products/diamond-studded-ring-18k-gold-plated-74162",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "b63757d06a2630caa2620fff0f83cfcad2e238c7401b22c87c2970fdbac2a014",
+      "notes": "",
+      "resolved_via": "scraped from product page (http://palmonas.com/cdn/shop/files/PM-RING-051-6-greybg.jpg?v=1786089375)",
+      "sha256": "969d6998a416061ecf8bac47052fc0f3dc7255c89ea18ac8f45637f4259ad5a2",
       "shared_with": [
         "BRC-002",
         "NCK-002"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "RNG-001",
+      "source_url": "https://palmonas.com/products/diamond-studded-ring-18k-gold-plated-74162",
+      "status": "ok"
     },
     "RNG-002": {
-      "bytes": 20852,
+      "attribution": "",
+      "bytes": 107129,
+      "catalog_url": "https://girirajjewellers.co.in/rings/gemstone-rings/sofia-ruby-gold-ring",
       "image_is_unique": true,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "bfc634a3eb7e4a21a60eae1c5241e583e509fee6b280ea9d8d6475427401832e",
-      "shared_with": [],
-      "source": "synthetic",
-      "status": "synthetic"
+      "notes": "",
+      "resolved_via": "scraped from product page (https://d25g9z9s77rn4i.cloudfront.net/uploads/product/600/1781169596_839319a078fcb5c61eb1.webp)",
+      "sha256": "0ce3c60619fc17fc3fdb95793ec1309cd5794c7cc5f7c0b0bb4a3baf81e83ef1",
+      "sku": "RNG-002",
+      "source_url": "https://girirajjewellers.co.in/rings/gemstone-rings/sofia-ruby-gold-ring",
+      "status": "ok"
     },
     "RNG-003": {
-      "bytes": 16120,
+      "attribution": "",
+      "bytes": 144870,
+      "catalog_url": "https://gemsrush.in/products/amethyst-ring",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "5bd71dcf061412a1a6275a9a9b3c6a41269b186e763cf4788b09347244a1b661",
+      "notes": "",
+      "resolved_via": "scraped from product page (http://gemsrush.in/cdn/shop/products/Natural-Purple-Amethyst-925-Sterling-Silver-Ring-Size-6-5-US-GemsRush-126.jpg?v=170)",
+      "sha256": "728084a94a0d53f1ff14fe3691cc6b49ee9448a5237bdb2a9db681bf254b7d09",
       "shared_with": [
         "BRC-006"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "RNG-003",
+      "source_url": "https://gemsrush.in/products/amethyst-ring",
+      "status": "ok"
     },
     "RNG-004": {
-      "bytes": 16769,
+      "attribution": "",
+      "bytes": 53476,
+      "catalog_url": "https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052",
       "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "acc386d240a3b24151003ae5a5c827a68241568a088179c433b6429b1b5d7a8a",
+      "notes": "",
+      "resolved_via": "scraped from product page (https://sencowebfiles.s3.ap-south-1.amazonaws.com/product-images/82c1b23e-eba3-431a-98c7-eb8ee535f073.jpg)",
+      "sha256": "bb5379ffff61dd3de1983365cdf442948f61c0ce9690fefae6af7ccf453c31d1",
       "shared_with": [
         "BRC-004",
         "NCK-004",
         "PEN-002"
       ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "sku": "RNG-004",
+      "source_url": "https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052",
+      "status": "ok"
     },
     "RNG-005": {
-      "bytes": 20746,
+      "attribution": "https://commons.wikimedia.org/wiki/File:Closeup_of_an_emerald_ring_in_a_finger.jpg | CC BY-SA 4.0",
+      "bytes": 113905,
+      "catalog_url": "https://www.etsy.com/in-en/listing/1299477377/emerald-cut-genuine-emerald-and-diamond",
       "image_is_unique": true,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "f8acd249882fd39d4c047100dc749d2a06aa665f219c4d23eed29036694c3370",
-      "shared_with": [],
-      "source": "synthetic",
-      "status": "synthetic"
+      "notes": "catalog URL failed: HTTPError: HTTP Error 403: Forbidden; fell back to Wikimedia Commons; source File:Closeup of an emerald ring in a finger.jpg",
+      "resolved_via": "direct image",
+      "sha256": "bbff9a1dd08bd183f7d05ca92bef3936d411d4519d0be6a409e5320d9110f168",
+      "sku": "RNG-005",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Closeup_of_an_emerald_ring_in_a_finger.jpg/1280px-Closeup_of_an_emerald_ring_in_a_finger.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "status": "ok"
     },
     "RNG-006": {
-      "bytes": 19903,
-      "image_is_unique": true,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "6da84d2d4b42e009e750ec6f30ab82b70cda0166a8a133b92fe78bbfdc1da5cb",
-      "shared_with": [],
-      "source": "synthetic",
-      "status": "synthetic"
+      "attribution": "",
+      "bytes": 169352,
+      "catalog_url": "https://www.samnsue.com/products/the-drenched-oval-morganite-ring-9x7mm-14k-rose-gold",
+      "image_is_unique": false,
+      "notes": "",
+      "resolved_via": "scraped from product page (http://www.samnsue.com/cdn/shop/files/oval-morganite-diamond-halo-drenched-rose-gold-1.jpg?v=1751490427&width=2048)",
+      "sha256": "c988319343daa66b3383c26d1e4eb92cc15dc9bb8fd857af28032173e9c06e1a",
+      "shared_with": [
+        "BRC-005"
+      ],
+      "sku": "RNG-006",
+      "source_url": "https://www.samnsue.com/products/the-drenched-oval-morganite-ring-9x7mm-14k-rose-gold",
+      "status": "ok"
     },
     "RNG-007": {
-      "bytes": 15980,
-      "image_is_unique": false,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "832f23fbea0c0bbc8db42fe6fd24f7ef53ad795a82f2ece726a0c1613f43a2d7",
-      "shared_with": [
-        "NCK-007"
-      ],
-      "source": "synthetic",
-      "status": "synthetic"
+      "attribution": "https://commons.wikimedia.org/wiki/File:Plain_Silver_Ring_-_YDEA_-_47026.jpg | CC0",
+      "bytes": 84436,
+      "catalog_url": "https://www.tatacliq.com/mia-by-tanishq-925-sterling-silver-ring-for-women",
+      "image_is_unique": true,
+      "notes": "catalog URL failed: ValueError: no product image found on the page; tried 0 candidates. ; fell back to Wikimedia Commons; source File:Plain Silver Ring - YDEA - 47026.jpg",
+      "resolved_via": "direct image",
+      "sha256": "8eb1284b1620c6a2bfe6760b752ef2e9c1589d7ca209643c3297d3f688458707",
+      "sku": "RNG-007",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Plain_Silver_Ring_-_YDEA_-_47026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "status": "ok"
     },
     "RNG-008": {
-      "bytes": 20821,
+      "attribution": "",
+      "bytes": 120112,
+      "catalog_url": "https://rkjewellers.in/products/buy-timeless-22k-gold-couples-rings-a-luxurious-symbol-of-forever-love",
       "image_is_unique": true,
-      "notes": "Generated illustration; not a photograph of a catalog item.",
-      "sha256": "36601c640424cf90cd5ec74ca0992bae9e2b84c712f0cee56fc6418d828c2066",
-      "shared_with": [],
-      "source": "synthetic",
-      "status": "synthetic"
+      "notes": "",
+      "resolved_via": "scraped from product page (http://rkjewellers.in/cdn/shop/files/GR01030_GR01033.jpg?v=1752153626)",
+      "sha256": "e0f4bab12251db84529a5fe201ceb4a64e680a378f144f9de2f6307a1f4feee4",
+      "sku": "RNG-008",
+      "source_url": "https://rkjewellers.in/products/buy-timeless-22k-gold-couples-rings-a-luxurious-symbol-of-forever-love",
+      "status": "ok"
     }
-  }
+  },
+  "generated_at": "2026-10-14T16:57:10+00:00",
+  "generated_by": "scripts/fetch_inventory_images.py"
 }

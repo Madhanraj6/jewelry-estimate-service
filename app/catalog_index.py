@@ -723,6 +723,18 @@ def get_product(sku: str, include_image: bool = True) -> dict | None:
     except Exception as exc:
         logger.warning("description unavailable for %s: %s", sku, exc)
         description, description_source = attribute_description(sku), "catalog_attributes"
+    image_metadata = load_manifest().get(sku, {})
+    image_source = image_metadata.get("source")
+    if image_source is None:
+        if image_metadata.get("status") == "ok":
+            image_source = (
+                "inventory_url"
+                if image_metadata.get("source_url") == image_metadata.get("catalog_url")
+                else "fallback_url"
+            )
+        else:
+            image_source = image_metadata.get("status", "unknown")
+    image_metadata = load_manifest().get(sku, {})
     product = {
         "sku": sku,
         "item_type": row["item_type"],
@@ -733,6 +745,8 @@ def get_product(sku: str, include_image: bool = True) -> dict | None:
         "base_price": float(row["base_price"]),
         "image_url": row.get("image_url", ""),
         "image_path": str(inventory_image_path(sku).relative_to(PROJECT_ROOT).as_posix()),
+        "image_source": image_source,
+        "image_is_unique": image_metadata.get("image_is_unique"),
         "description": description,
         "description_source": description_source,
     }

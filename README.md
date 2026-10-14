@@ -29,10 +29,11 @@ python scripts\build_catalog_index.py --force
 ```
 
 The demo references are owner-provided images; the iStock chain photo is redistributed
-under the project owner's license. Bundled catalog illustrations are synthetic. Run
-`python scripts\generate_sample_assets.py` to regenerate the synthetic illustrations
-and demo media. The result page displays the uploaded reference photo alongside the
-closest catalog candidate photo when those images are available.
+under the project owner's license. Catalog candidate images are real product photos
+resolved from the CSV listing URLs, with licensed fallbacks for listings that block image
+retrieval. Run `python scripts\generate_sample_assets.py` to regenerate only the demo
+GIF and video. After analysis, the closest candidate image appears in its result card;
+the uploaded reference photo is shown separately below.
 Without a multimodal API key, OpenCV estimates image components but does not identify
 jewelry type; image-only requests with an unknown type are not presented as catalog
 recommendations.
@@ -42,7 +43,8 @@ recommendations.
 ```powershell
 venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-python scripts\generate_sample_assets.py   # optional: regenerate the synthetic examples
+python scripts\fetch_inventory_images.py   # download catalog photos from CSV listing URLs
+python scripts\generate_sample_assets.py  # optional: regenerate demo GIF/video only
 python scripts\build_catalog_index.py      # one-time: describe + embed into Qdrant
 $env:GEMINI_API_KEY = "your-key"           # optional; enables all Gemini paths
 uvicorn app.main:app --reload
@@ -51,8 +53,8 @@ uvicorn app.main:app --reload
 Open `http://127.0.0.1:8000/` for the browser frontend, or `http://127.0.0.1:8000/docs`
 for the API documentation.
 The home page shows sample ring, chain, and pendant photos; click one to load it into the
-reference-image field, then select **Analyze item** to see the uploaded and catalog photos
-alongside the estimate.
+reference-image field, then select **Analyze item** to see the uploaded photo and closest
+candidate product image alongside the estimate.
 
 ### Demo media
 
@@ -61,8 +63,8 @@ alongside the estimate.
 - [Pendant reference photo](examples/media/reference-pendant.jpg)
 - [Video walkthrough](examples/media/demo.mp4)
 
-The photos are for reference-image demonstrations, not a price quote.
-Regenerate the images, GIF, and video with `python scripts\generate_sample_assets.py`.
+The photos are for reference-image demonstrations, not a price quote. Regenerate the
+walkthrough GIF and video with `python scripts\generate_sample_assets.py`.
 
 ```powershell
 Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8000/analyze `
@@ -309,14 +311,15 @@ python scripts\fetch_inventory_images.py --force  # re-download
 ```
 
 `data/images/manifest.json` records provenance for every file: the catalog URL, the
-resolved image URL, SHA-256, byte size, license note, and `image_is_unique` with a
-`shared_with` list.
+resolved image URL, SHA-256, byte size, attribution when available, and
+`image_is_unique` with a `shared_with` list.
 
-Current state of the catalog: **36 SKUs, 36 photos, but only 23 distinct** — 8 groups still
-share one photo. Nine URLs cannot be resolved (Etsy returns 403 to non-browser clients;
-TataCliq and gehnaindia serve JavaScript-rendered pages with no product image in the HTML)
-and fall back to freely licensed Wikimedia Commons photos listed in `COMMONS_FALLBACKS`.
-Two rows are mislabeled against their own photo: `BRC-005` and `BRC-006`.
+The current local cache contains **36 product photos** (26 retrieved from CSV listing
+URLs and 10 replaced with the script's Wikimedia Commons fallbacks). It has 23 distinct
+images because multiple SKUs in the CSV share listing URLs; those matches are flagged
+for human review. Re-run `python scripts\fetch_inventory_images.py --force` to refresh
+the cache and `python scripts\build_catalog_index.py --force` to rebuild image embeddings
+after the photos change.
 
 **To use your own product photos:** drop a file at `data/images/<SKU>.jpg` for each SKU and
 re-run the fetcher, then rebuild the index. No code changes.

@@ -1,110 +1,22 @@
-"""Generate synthetic catalog illustrations and reference-photo demo media.
+"""Generate reference-photo walkthrough media.
 
 Run this in the project root with:
     python scripts/generate_sample_assets.py
 
 The script uses the bundled owner-provided reference images under examples/media.
-Generated catalog images are illustrations for offline testing, not product photos.
+Catalog images are fetched separately from the product URLs in data/invent.csv.
 """
 
 from __future__ import annotations
 
-import argparse
-import hashlib
-import json
 import struct
 from pathlib import Path
 
 import cv2
 import numpy as np
-import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
-INVENTORY = ROOT / "data" / "invent.csv"
-IMAGE_DIR = ROOT / "data" / "images"
 MEDIA_DIR = ROOT / "examples" / "media"
-SIZE = 640
-
-METALS = {
-    "gold": (34, 177, 243),
-    "rose gold": (100, 155, 220),
-    "silver": (190, 198, 205),
-    "platinum": (174, 184, 192),
-}
-GEMS = {
-    "diamond": (235, 245, 250),
-    "ruby": (45, 55, 205),
-    "emerald": (55, 150, 70),
-    "sapphire": (190, 80, 25),
-    "amethyst": (175, 80, 165),
-    "pearl": (225, 230, 235),
-    "turquoise": (190, 180, 45),
-    "onyx": (40, 40, 45),
-    "morganite": (145, 175, 225),
-    "none": (220, 225, 230),
-}
-
-
-def _gemstone_color(name: str) -> tuple[int, int, int]:
-    name = str(name).lower()
-    return next((color for gem, color in GEMS.items() if gem in name), GEMS["diamond"])
-
-
-def draw_jewelry(item_type: str, metal: str, gemstone: str, seed: int = 0) -> np.ndarray:
-    """Render a simple, original illustration of one jewelry category."""
-    image = np.full((SIZE, SIZE, 3), 250, dtype=np.uint8)
-    metal_color = METALS.get(str(metal).lower(), METALS["gold"])
-    gem_color = _gemstone_color(gemstone)
-    center = (SIZE // 2, SIZE // 2)
-    item_type = str(item_type).lower()
-
-    if item_type == "ring":
-        cv2.ellipse(image, center, (170, 135), -12, 0, 360, metal_color, 31, cv2.LINE_AA)
-        cv2.ellipse(image, (center[0], center[1] - 4), (128, 94), -12, 0, 360, (250, 250, 250), -1, cv2.LINE_AA)
-        for offset in (-52, -26, 0, 26, 52):
-            cv2.circle(image, (center[0] + offset, center[1] - 120), 13 if offset == 0 else 8, gem_color, -1, cv2.LINE_AA)
-            cv2.circle(image, (center[0] + offset, center[1] - 120), 13 if offset == 0 else 8, (160, 145, 125), 1, cv2.LINE_AA)
-    elif item_type == "bracelet":
-        cv2.ellipse(image, center, (210, 132), 0, 0, 360, metal_color, 34, cv2.LINE_AA)
-        cv2.ellipse(image, center, (166, 91), 0, 0, 360, (250, 250, 250), -1, cv2.LINE_AA)
-        for angle in range(210, 331, 30):
-            point = (center[0] + int(190 * np.cos(np.deg2rad(angle))), center[1] + int(115 * np.sin(np.deg2rad(angle))))
-            cv2.circle(image, point, 9, gem_color, -1, cv2.LINE_AA)
-    elif item_type in {"chain", "necklace"}:
-        points = []
-        for i in range(41):
-            t = i / 40
-            x = int(112 + 416 * t)
-            y = int(180 + 250 * (abs(2 * t - 1) ** 1.5))
-            points.append((x, y))
-        cv2.polylines(image, [np.array(points, dtype=np.int32)], False, metal_color, 8, cv2.LINE_AA)
-        for i, point in enumerate(points[::2]):
-            cv2.ellipse(image, point, (8, 5), (i % 2) * 40, 0, 360, (155, 135, 110), 2, cv2.LINE_AA)
-        if item_type == "necklace":
-            cv2.circle(image, points[-1], 39, metal_color, 8, cv2.LINE_AA)
-            cv2.circle(image, points[-1], 23, gem_color, -1, cv2.LINE_AA)
-    elif item_type == "pendant":
-        cv2.ellipse(image, (center[0], 135), (22, 34), 0, 0, 360, metal_color, 10, cv2.LINE_AA)
-        cv2.line(image, (center[0], 168), (center[0], 205), metal_color, 8, cv2.LINE_AA)
-        cv2.circle(image, center, 105, metal_color, 20, cv2.LINE_AA)
-        cv2.circle(image, center, 75, gem_color, -1, cv2.LINE_AA)
-        cv2.circle(image, center, 39, (240, 240, 240), -1, cv2.LINE_AA)
-        cv2.circle(image, center, 22, gem_color, -1, cv2.LINE_AA)
-        cv2.circle(image, (center[0], 463), 27, gem_color, -1, cv2.LINE_AA)
-        cv2.line(image, (center[0], 394), (center[0], 434), metal_color, 8, cv2.LINE_AA)
-    elif item_type in {"earring", "earrings"}:
-        for x in (center[0] - 112, center[0] + 112):
-            cv2.ellipse(image, (x, center[1] - 28), (56, 76), 0, 0, 360, metal_color, 13, cv2.LINE_AA)
-            cv2.circle(image, (x, center[1] + 65), 27, gem_color, -1, cv2.LINE_AA)
-            cv2.circle(image, (x, center[1] + 65), 27, metal_color, 4, cv2.LINE_AA)
-    else:
-        cv2.circle(image, center, 118, metal_color, 20, cv2.LINE_AA)
-        cv2.circle(image, center, 74, gem_color, -1, cv2.LINE_AA)
-
-    rng = np.random.default_rng(seed)
-    caption = f"{item_type.title()} illustration"
-    cv2.putText(image, caption, (22, SIZE - 20), cv2.FONT_HERSHEY_SIMPLEX, 0.62, (110, 115, 125), 1, cv2.LINE_AA)
-    return image
 
 
 def _rounded_card(frame: np.ndarray, top_left: tuple[int, int], bottom_right: tuple[int, int], fill=(255, 255, 255)) -> None:
@@ -228,67 +140,7 @@ def create_demo_gif(references: list[tuple[str, np.ndarray]], output: Path) -> N
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--force",
-        action="store_true",
-        help="replace existing catalog images, including non-synthetic local files",
-    )
-    args = parser.parse_args()
-
-    inventory = pd.read_csv(INVENTORY, dtype={"sku": str}).fillna("")
-    manifest_path = IMAGE_DIR / "manifest.json"
-    previous = {}
-    if manifest_path.is_file():
-        previous = json.loads(manifest_path.read_text(encoding="utf-8")).get("entries", {})
-    existing_images = list(IMAGE_DIR.glob("*.jpg"))
-    non_synthetic = [
-        path.name
-        for path in existing_images
-        if previous.get(path.stem, {}).get("source") != "synthetic"
-    ]
-    if non_synthetic and not args.force:
-        raise SystemExit(
-            "Refusing to overwrite existing non-synthetic catalog images. "
-            "Use --force only if replacing them is intended."
-        )
-
-    IMAGE_DIR.mkdir(parents=True, exist_ok=True)
     MEDIA_DIR.mkdir(parents=True, exist_ok=True)
-    entries = {}
-    grouped_rows = inventory.groupby("image_url", sort=True, dropna=False)
-    for _, group in grouped_rows:
-        rows = group.to_dict(orient="records")
-        first = rows[0]
-        members = sorted(str(row["sku"]) for row in rows)
-        image = draw_jewelry(
-            first["item_type"],
-            first["metal"],
-            first["gemstone"],
-            seed=sum(map(ord, str(first["sku"]))),
-        )
-        ok, encoded = cv2.imencode(".jpg", image, [cv2.IMWRITE_JPEG_QUALITY, 92])
-        if not ok:
-            raise RuntimeError(f"Could not encode synthetic image for {first['sku']}")
-        raw = encoded.tobytes()
-        digest = hashlib.sha256(raw).hexdigest()
-        for sku in members:
-            path = IMAGE_DIR / f"{sku}.jpg"
-            path.write_bytes(raw)
-            entries[sku] = {
-                "source": "synthetic",
-                "status": "synthetic",
-                "bytes": len(raw),
-                "sha256": digest,
-                "image_is_unique": len(members) == 1,
-                "shared_with": [member for member in members if member != sku],
-                "notes": "Generated illustration; not a photograph of a catalog item.",
-            }
-
-    manifest_path.write_text(
-        json.dumps({"entries": entries}, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
-    )
     reference_specs = [
         ("ring", MEDIA_DIR / "reference-ring.jpg"),
         ("chain", MEDIA_DIR / "reference-chain.jpg"),
@@ -305,7 +157,6 @@ def main() -> None:
     create_demo_video(references, video_path)
     gif_path = MEDIA_DIR / "demo.gif"
     create_demo_gif(references, gif_path)
-    print(f"Generated {len(entries)} synthetic catalog illustrations in {IMAGE_DIR}")
     print(f"Using {len(references)} provided reference photos from {MEDIA_DIR}")
     print(f"Generated walkthrough GIF and video: {gif_path}, {video_path}")
 

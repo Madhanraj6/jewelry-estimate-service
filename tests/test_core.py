@@ -512,6 +512,39 @@ def test_product_details_include_the_image():
     assert product["image_mime"] == "image/jpeg"
 
 
+@pytest.mark.parametrize(
+    ("source_url", "expected_source"),
+    [
+        ("https://catalog.example/ring", "inventory_url"),
+        ("https://images.example/ring.jpg", "fallback_url"),
+    ],
+)
+def test_product_reports_catalog_or_fallback_image_source(
+    monkeypatch, source_url, expected_source
+):
+    monkeypatch.setattr(
+        catalog_index,
+        "load_manifest",
+        lambda: {
+            "RNG-001": {
+                "catalog_url": "https://catalog.example/ring",
+                "source_url": source_url,
+                "status": "ok",
+            }
+        },
+    )
+    monkeypatch.setattr(
+        catalog_index,
+        "describe_image",
+        lambda sku: {"description": "A ring", "source": "catalog_attributes"},
+    )
+
+    product = catalog_index.get_product("RNG-001", include_image=False)
+
+    assert product is not None
+    assert product["image_source"] == expected_source
+
+
 def test_unknown_sku_returns_none():
     assert catalog_index.get_product("NOPE-999") is None
 
