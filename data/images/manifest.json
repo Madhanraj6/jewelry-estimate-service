@@ -1,0 +1,395 @@
+{
+  "entries": {
+    "BRC-001": {
+      "bytes": 21200,
+      "image_is_unique": true,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "34a91ce5c37f9b9eac2e1a397333bc24ab4a33d34d2711bc01365c4d9b8de297",
+      "shared_with": [],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "BRC-002": {
+      "bytes": 20900,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "b63757d06a2630caa2620fff0f83cfcad2e238c7401b22c87c2970fdbac2a014",
+      "shared_with": [
+        "NCK-002",
+        "RNG-001"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "BRC-003": {
+      "bytes": 16523,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "b126527a154cf5e7dfdff159a88f6b2260c3e6e771fcda094d1c9ebab5f7f508",
+      "shared_with": [
+        "CHN-003",
+        "NCK-003"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "BRC-004": {
+      "bytes": 16769,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "acc386d240a3b24151003ae5a5c827a68241568a088179c433b6429b1b5d7a8a",
+      "shared_with": [
+        "NCK-004",
+        "PEN-002",
+        "RNG-004"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "BRC-005": {
+      "bytes": 21090,
+      "image_is_unique": true,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "9cffe0b021682c2796d39eb9375ac46de127884290bba8f288bb1d86c83903c0",
+      "shared_with": [],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "BRC-006": {
+      "bytes": 16120,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "5bd71dcf061412a1a6275a9a9b3c6a41269b186e763cf4788b09347244a1b661",
+      "shared_with": [
+        "RNG-003"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "BRC-007": {
+      "bytes": 16523,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "b126527a154cf5e7dfdff159a88f6b2260c3e6e771fcda094d1c9ebab5f7f508",
+      "shared_with": [
+        "CHN-007"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "BRC-008": {
+      "bytes": 18965,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
+      "shared_with": [
+        "CHN-001",
+        "NCK-008"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "CHN-001": {
+      "bytes": 18965,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
+      "shared_with": [
+        "BRC-008",
+        "NCK-008"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "CHN-002": {
+      "bytes": 18965,
+      "image_is_unique": true,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
+      "shared_with": [],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "CHN-003": {
+      "bytes": 16523,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "b126527a154cf5e7dfdff159a88f6b2260c3e6e771fcda094d1c9ebab5f7f508",
+      "shared_with": [
+        "BRC-003",
+        "NCK-003"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "CHN-004": {
+      "bytes": 16707,
+      "image_is_unique": true,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "4d9b2a9f83d2d4686b227bf55054d68e41af40b70b914a274bf3c6622854801b",
+      "shared_with": [],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "CHN-005": {
+      "bytes": 18315,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "c7085a2ecc34d6fe3011a993641deb5c11dfa81e215d94dbc301112a3adab6d4",
+      "shared_with": [
+        "NCK-005"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "CHN-006": {
+      "bytes": 18965,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
+      "shared_with": [
+        "NCK-006"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "CHN-007": {
+      "bytes": 16523,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "b126527a154cf5e7dfdff159a88f6b2260c3e6e771fcda094d1c9ebab5f7f508",
+      "shared_with": [
+        "BRC-007"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "CHN-008": {
+      "bytes": 18965,
+      "image_is_unique": true,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
+      "shared_with": [],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "EAR-001": {
+      "bytes": 19584,
+      "image_is_unique": true,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "2888f90904f396279a3467875d93879affb4022e5f95cc23e54d2854f29b0126",
+      "shared_with": [],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "EAR-002": {
+      "bytes": 21320,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "5654e85b468364768d492360c9443deb18932042562e46ad01d5300e2f2468d2",
+      "shared_with": [
+        "NCK-001"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "NCK-001": {
+      "bytes": 21320,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "5654e85b468364768d492360c9443deb18932042562e46ad01d5300e2f2468d2",
+      "shared_with": [
+        "EAR-002"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "NCK-002": {
+      "bytes": 20900,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "b63757d06a2630caa2620fff0f83cfcad2e238c7401b22c87c2970fdbac2a014",
+      "shared_with": [
+        "BRC-002",
+        "RNG-001"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "NCK-003": {
+      "bytes": 16523,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "b126527a154cf5e7dfdff159a88f6b2260c3e6e771fcda094d1c9ebab5f7f508",
+      "shared_with": [
+        "BRC-003",
+        "CHN-003"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "NCK-004": {
+      "bytes": 16769,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "acc386d240a3b24151003ae5a5c827a68241568a088179c433b6429b1b5d7a8a",
+      "shared_with": [
+        "BRC-004",
+        "PEN-002",
+        "RNG-004"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "NCK-005": {
+      "bytes": 18315,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "c7085a2ecc34d6fe3011a993641deb5c11dfa81e215d94dbc301112a3adab6d4",
+      "shared_with": [
+        "CHN-005"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "NCK-006": {
+      "bytes": 18965,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
+      "shared_with": [
+        "CHN-006"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "NCK-007": {
+      "bytes": 15980,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "832f23fbea0c0bbc8db42fe6fd24f7ef53ad795a82f2ece726a0c1613f43a2d7",
+      "shared_with": [
+        "RNG-007"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "NCK-008": {
+      "bytes": 18965,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "ccd30bb1905228b735c304d577e357b2d7bcdac3fdd45dcbcf6a300cf43e42e6",
+      "shared_with": [
+        "BRC-008",
+        "CHN-001"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "PEN-001": {
+      "bytes": 25847,
+      "image_is_unique": true,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "948f287a7504afbbdf7e1383744ea5744caaaedcf7b947325e3fd2f738d3da18",
+      "shared_with": [],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "PEN-002": {
+      "bytes": 16769,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "acc386d240a3b24151003ae5a5c827a68241568a088179c433b6429b1b5d7a8a",
+      "shared_with": [
+        "BRC-004",
+        "NCK-004",
+        "RNG-004"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "RNG-001": {
+      "bytes": 20900,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "b63757d06a2630caa2620fff0f83cfcad2e238c7401b22c87c2970fdbac2a014",
+      "shared_with": [
+        "BRC-002",
+        "NCK-002"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "RNG-002": {
+      "bytes": 20852,
+      "image_is_unique": true,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "bfc634a3eb7e4a21a60eae1c5241e583e509fee6b280ea9d8d6475427401832e",
+      "shared_with": [],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "RNG-003": {
+      "bytes": 16120,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "5bd71dcf061412a1a6275a9a9b3c6a41269b186e763cf4788b09347244a1b661",
+      "shared_with": [
+        "BRC-006"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "RNG-004": {
+      "bytes": 16769,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "acc386d240a3b24151003ae5a5c827a68241568a088179c433b6429b1b5d7a8a",
+      "shared_with": [
+        "BRC-004",
+        "NCK-004",
+        "PEN-002"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "RNG-005": {
+      "bytes": 20746,
+      "image_is_unique": true,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "f8acd249882fd39d4c047100dc749d2a06aa665f219c4d23eed29036694c3370",
+      "shared_with": [],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "RNG-006": {
+      "bytes": 19903,
+      "image_is_unique": true,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "6da84d2d4b42e009e750ec6f30ab82b70cda0166a8a133b92fe78bbfdc1da5cb",
+      "shared_with": [],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "RNG-007": {
+      "bytes": 15980,
+      "image_is_unique": false,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "832f23fbea0c0bbc8db42fe6fd24f7ef53ad795a82f2ece726a0c1613f43a2d7",
+      "shared_with": [
+        "NCK-007"
+      ],
+      "source": "synthetic",
+      "status": "synthetic"
+    },
+    "RNG-008": {
+      "bytes": 20821,
+      "image_is_unique": true,
+      "notes": "Generated illustration; not a photograph of a catalog item.",
+      "sha256": "36601c640424cf90cd5ec74ca0992bae9e2b84c712f0cee56fc6418d828c2066",
+      "shared_with": [],
+      "source": "synthetic",
+      "status": "synthetic"
+    }
+  }
+}

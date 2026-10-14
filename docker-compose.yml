@@ -1,0 +1,21 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # Secrets are never baked into the image; supply them through a .env file
+      # or your orchestrator's secret store.
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.8-flash}
+      GEMINI_FALLBACK_MODEL: ${GEMINI_FALLBACK_MODEL:-gemini-3.5-flash-lite}
+      GEMINI_EMBEDDING_MODEL: ${GEMINI_EMBEDDING_MODEL:-gemini-embedding-2}
+      GEMINI_VISION_MODEL: ${GEMINI_VISION_MODEL:-gemini-3.8-flash}
+      IMAGE_EMBEDDING_BACKEND: ${IMAGE_EMBEDDING_BACKEND:-auto}
+      VISION_VERIFY_ENABLED: ${VISION_VERIFY_ENABLED:-1}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

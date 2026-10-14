@@ -1,0 +1,18 @@
+venv/
+__pycache__/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+
+# The Qdrant store and embedding cache are rebuildable artifacts:
+#   python scripts/fetch_inventory_images.py && python scripts/build_catalog_index.py
+# They are also backend-specific (Gemini and offline vectors differ in width), so
+# shipping one person's copy would break a reviewer on the other path. The service
+# detects the mismatch and rebuilds automatically when it can do so for free.
+data/index/
+data/.cache/
+
+# Catalog photos ARE committed (about 4 MB) so the service runs out of the box and the
+# image manifest and count fixtures have something real to work against.
+# To rebuild them from data/invent.csv instead: python scripts/fetch_inventory_images.py --force

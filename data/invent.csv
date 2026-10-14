@@ -1,0 +1,37 @@
+sku,item_type,metal,purity,gemstone,weight_grams,base_price,image_url
+RNG-001,ring,gold,18K,diamond,3.2,620,https://palmonas.com/products/diamond-studded-ring-18k-gold-plated-74162
+RNG-002,ring,gold,22K,ruby,4.1,710,https://girirajjewellers.co.in/rings/gemstone-rings/sofia-ruby-gold-ring
+RNG-003,ring,silver,925,amethyst,2.8,110,https://gemsrush.in/products/amethyst-ring
+RNG-004,ring,platinum,950,diamond,5.0,1250,https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052
+RNG-005,ring,gold,14K,emerald,3.6,480,https://www.etsy.com/in-en/listing/1299477377/emerald-cut-genuine-emerald-and-diamond
+RNG-006,ring,rose gold,18K,morganite,3.9,590,https://www.samnsue.com/products/the-drenched-oval-morganite-ring-9x7mm-14k-rose-gold
+RNG-007,ring,silver,925,none,4.5,75,https://www.tatacliq.com/mia-by-tanishq-925-sterling-silver-ring-for-women
+RNG-008,ring,gold,22K,none,5.2,670,https://rkjewellers.in/products/buy-timeless-22k-gold-couples-rings-a-luxurious-symbol-of-forever-love
+CHN-001,chain,gold,22K,none,12.4,1580,https://girirajjewellers.co.in/gold-chains/men-s-gold-chains/udarsh-22k-gold-chain-for-men
+CHN-002,chain,gold,18K,none,9.8,1010,https://www.etsy.com/in-en/listing/1528498974/18k-solid-gold-rope-chain-necklace
+CHN-003,chain,silver,925,none,15.6,180,https://tribalornaments.com/products/1-5mm-925-sterling-silver-chain-plain-bright-silver-trendy-style-boys-girls-chain-ch595
+CHN-004,chain,platinum,950,none,11.2,1340,https://www.tatacliq.com/joyalukkas-magnetic-950-platinum-chain/p-mp000000021201910
+CHN-005,chain,rose gold,18K,none,8.7,900,https://caratly.in/products/gold-chain-1
+CHN-006,chain,gold,14K,none,10.1,760,https://www.etsy.com/in-en/listing/1481497760/14k-yellow-gold-rope-chain-necklace
+CHN-007,chain,silver,925,black onyx,14.3,230,https://www.tatacliq.com/clara-925-silver-platinum-plated-swiss-zircon-black-onyx-pendant-with-chain/p-mp000000023348311
+CHN-008,chain,gold,22K,diamond,13.0,1890,https://tdfjewellery.com/product/suvrata-22-kt-closesetting-diamond-necklace
+NCK-001,necklace,gold,22K,pearl,18.5,2420,https://krishnapearls.com/products/22k-gold-pearl-necklace-and-earrings-set
+NCK-002,necklace,gold,18K,diamond,14.2,2110,https://palmonas.com/products/diamond-studded-ring-18k-gold-plated-74162
+NCK-003,necklace,silver,925,turquoise,20.1,310,https://tribalornaments.com/products/1-5mm-925-sterling-silver-chain-plain-bright-silver-trendy-style-boys-girls-chain-ch595
+NCK-004,necklace,platinum,950,diamond,16.8,3540,https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052
+NCK-005,necklace,rose gold,18K,moissanite,12.6,1560,https://caratly.in/products/gold-chain-1
+NCK-006,necklace,gold,14K,sapphire,15.3,1430,https://www.etsy.com/in-en/listing/1481497760/14k-yellow-gold-rope-chain-necklace
+NCK-007,necklace,silver,925,none,17.9,220,https://www.tatacliq.com/mia-by-tanishq-925-sterling-silver-ring-for-women
+NCK-008,necklace,gold,22K,emerald,19.4,2790,https://girirajjewellers.co.in/gold-chains/men-s-gold-chains/udarsh-22k-gold-chain-for-men
+BRC-001,bracelet,gold,22K,none,11.7,1490,https://pachchigarjewellers.com/products/22k-gold-rudraksha-bracelet
+BRC-002,bracelet,gold,18K,diamond,9.4,1370,https://palmonas.com/products/diamond-studded-ring-18k-gold-plated-74162
+BRC-003,bracelet,silver,925,none,13.8,165,https://tribalornaments.com/products/1-5mm-925-sterling-silver-chain-plain-bright-silver-trendy-style-boys-girls-chain-ch595
+BRC-004,bracelet,platinum,950,diamond,12.1,2390,https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052
+BRC-005,bracelet,rose gold,18K,ruby,8.9,1120,https://samnsue.com/products/the-drenched-oval-morganite-ring-9x7mm-14k-rose-gold
+BRC-006,bracelet,gold,14K,amethyst,10.7,830,https://gemsrush.in/products/amethyst-ring
+BRC-007,bracelet,silver,925,black onyx,12.5,205,https://www.tatacliq.com/clara-925-silver-platinum-plated-swiss-zircon-black-onyx-pendant-with-chain/p-mp000000023348311
+BRC-008,bracelet,gold,22K,emerald,14.0,1950,https://girirajjewellers.co.in/gold-chains/men-s-gold-chains/udarsh-22k-gold-chain-for-men
+EAR-001,earrings,gold,18K,diamond,4.2,940,https://www.gehnaindia.com/blooming-grown-diamond-14k-gold-petal-stud-earrings
+EAR-002,earrings,silver,925,pearl,5.1,140,https://krishnapearls.com/products/22k-gold-pearl-necklace-and-earrings-set
+PEN-001,pendant,gold,22K,sapphire,6.8,1060,https://www.bhimagold.com/products/traditionally-crafted-blue-sapphire-studded-22kt-gold-pendant-for-women-ngo-chlc-s-67017
+PEN-002,pendant,platinum,950,diamond,5.9,1460,https://everlite.com/products/950-platinum-diamond-ring-pdrgl-d000663052

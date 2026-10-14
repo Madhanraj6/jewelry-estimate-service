@@ -1,0 +1,13 @@
+fastapi
+python-multipart
+uvicorn[standard]
+pydantic>=2
+openai
+google-genai
+qdrant-client
+python-dotenv
+opencv-python-headless
+numpy
+pandas
+httpx
+pytest
