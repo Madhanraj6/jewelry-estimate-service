@@ -17,6 +17,11 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 MEDIA_DIR = ROOT / "examples" / "media"
+INVENTORY_MATCHES = {
+    "ring": "RNG-001",
+    "chain": "CHN-001",
+    "pendant": "PEN-001",
+}
 
 
 def _rounded_card(frame: np.ndarray, top_left: tuple[int, int], bottom_right: tuple[int, int], fill=(255, 255, 255)) -> None:
@@ -24,7 +29,23 @@ def _rounded_card(frame: np.ndarray, top_left: tuple[int, int], bottom_right: tu
     cv2.rectangle(frame, top_left, bottom_right, (225, 229, 235), 2, cv2.LINE_AA)
 
 
-def _demo_frame(reference: np.ndarray, step: int, item_type: str) -> np.ndarray:
+def _fit_image(image: np.ndarray, width: int, height: int) -> np.ndarray:
+    scale = min(width / image.shape[1], height / image.shape[0])
+    resized = cv2.resize(
+        image,
+        (round(image.shape[1] * scale), round(image.shape[0] * scale)),
+        interpolation=cv2.INTER_AREA,
+    )
+    canvas = np.full((height, width, 3), 255, dtype=np.uint8)
+    top = (height - resized.shape[0]) // 2
+    left = (width - resized.shape[1]) // 2
+    canvas[top : top + resized.shape[0], left : left + resized.shape[1]] = resized
+    return canvas
+
+
+def _demo_frame(
+    reference: np.ndarray, candidate: np.ndarray, step: int, item_type: str, sku: str
+) -> np.ndarray:
     width, height = 1280, 720
     frame = np.full((height, width, 3), (247, 248, 251), dtype=np.uint8)
     cv2.putText(frame, "JEWELRY ESTIMATE SERVICE", (54, 68), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (70, 82, 98), 2, cv2.LINE_AA)
@@ -33,28 +54,24 @@ def _demo_frame(reference: np.ndarray, step: int, item_type: str) -> np.ndarray:
         ("Reference photo 2", "Chain"),
         ("Reference photo 3", "Pendant"),
     ]
-    title, subtitle = captions[step]
-    cv2.putText(frame, title, (54, 150), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (34, 50, 70), 3, cv2.LINE_AA)
+    _, subtitle = captions[step]
+    cv2.putText(frame, "Reference photo -> closest catalog match", (54, 150), cv2.FONT_HERSHEY_SIMPLEX, 0.95, (34, 50, 70), 2, cv2.LINE_AA)
     cv2.putText(frame, subtitle, (54, 192), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (100, 110, 125), 1, cv2.LINE_AA)
     _rounded_card(frame, (54, 235), (584, 646))
     _rounded_card(frame, (626, 235), (1226, 646))
-    preview = cv2.resize(reference, (450, 450), interpolation=cv2.INTER_AREA)
-    frame[270:720, 94:544] = preview
-    cv2.putText(frame, f"UPLOADED REFERENCE: {item_type.upper()}", (98, 616), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (100, 110, 125), 1, cv2.LINE_AA)
-    details = [
-        ([f"Reference category: {item_type}", "Customer image shown as submitted.", "No extraction inferred here."], (45, 80, 145)),
-        (["Use with a short product brief.", "Model output is schema-validated.", "Unknowns stay explicitly unknown."], (45, 115, 75)),
-        (["Catalog candidates are ranked", "with deterministic scoring.", "Low confidence means review.", "Catalog base price is not a quote."], (45, 80, 145)),
-    ]
-    lines, color = details[step]
-    for index, line in enumerate(lines):
-        cv2.putText(frame, line, (678, 340 + index * 56), cv2.FONT_HERSHEY_SIMPLEX, 0.62, color, 2, cv2.LINE_AA)
+    frame[270:590, 84:554] = _fit_image(reference, 470, 320)
+    frame[270:590, 704:1144] = _fit_image(candidate, 440, 320)
+    cv2.putText(frame, f"UPLOADED REFERENCE: {item_type.upper()}", (78, 620), cv2.FONT_HERSHEY_SIMPLEX, 0.48, (100, 110, 125), 1, cv2.LINE_AA)
+    cv2.putText(frame, f"TOP CATALOG CANDIDATE: {sku}", (652, 620), cv2.FONT_HERSHEY_SIMPLEX, 0.48, (100, 110, 125), 1, cv2.LINE_AA)
+    cv2.putText(frame, "Product image from the CSV-linked catalog listing.", (652, 665), cv2.FONT_HERSHEY_SIMPLEX, 0.46, (75, 85, 98), 1, cv2.LINE_AA)
     for index in range(3):
         cv2.circle(frame, (54 + index * 40, 684), 8, (183, 121, 31) if index == step else (215, 220, 228), -1, cv2.LINE_AA)
     return frame
 
 
-def create_demo_video(references: list[tuple[str, np.ndarray]], output: Path) -> None:
+def create_demo_video(
+    references: list[tuple[str, np.ndarray, np.ndarray, str]], output: Path
+) -> None:
     width, height, fps = 1280, 720, 15
     writer = cv2.VideoWriter(
         str(output), cv2.VideoWriter_fourcc(*"mp4v"), fps, (width, height)
@@ -62,8 +79,8 @@ def create_demo_video(references: list[tuple[str, np.ndarray]], output: Path) ->
     if not writer.isOpened():
         raise RuntimeError("OpenCV could not initialize an MP4 encoder")
     try:
-        for step, (item_type, reference) in enumerate(references):
-            frame = _demo_frame(reference, step, item_type)
+        for step, (item_type, reference, candidate, sku) in enumerate(references):
+            frame = _demo_frame(reference, candidate, step, item_type, sku)
             for _ in range(30):
                 writer.write(frame)
     finally:
@@ -116,15 +133,17 @@ def _gif_image_data(frame: np.ndarray) -> bytes:
     return bytes(blocks)
 
 
-def create_demo_gif(references: list[tuple[str, np.ndarray]], output: Path) -> None:
+def create_demo_gif(
+    references: list[tuple[str, np.ndarray, np.ndarray, str]], output: Path
+) -> None:
     width, height = 480, 270
     header = bytearray(b"GIF89a")
     header.extend(struct.pack("<HHBBB", width, height, 0xF7, 0, 0))
     header.extend(_gif_palette())
     header.extend(b"\x21\xff\x0bNETSCAPE2.0\x03\x01\x00\x00\x00")
-    for step, (item_type, reference) in enumerate(references):
+    for step, (item_type, reference, candidate, sku) in enumerate(references):
         frame = cv2.resize(
-            _demo_frame(reference, step, item_type),
+            _demo_frame(reference, candidate, step, item_type, sku),
             (width, height),
             interpolation=cv2.INTER_AREA,
         )
@@ -151,7 +170,14 @@ def main() -> None:
         reference = cv2.imread(str(path), cv2.IMREAD_COLOR)
         if reference is None:
             raise FileNotFoundError(f"Required demo reference image is missing or unreadable: {path}")
-        references.append((item_type, reference))
+        sku = INVENTORY_MATCHES[item_type]
+        candidate_path = ROOT / "data" / "images" / f"{sku}.jpg"
+        candidate = cv2.imread(str(candidate_path), cv2.IMREAD_COLOR)
+        if candidate is None:
+            raise FileNotFoundError(
+                f"Required catalog candidate image is missing or unreadable: {candidate_path}"
+            )
+        references.append((item_type, reference, candidate, sku))
 
     video_path = MEDIA_DIR / "demo.mp4"
     create_demo_video(references, video_path)

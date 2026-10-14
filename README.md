@@ -61,8 +61,10 @@ candidate product image alongside the estimate.
 - [Ring reference photo](examples/media/reference-ring.jpg)
 - [Chain reference photo](examples/media/reference-chain.jpg)
 - [Pendant reference photo](examples/media/reference-pendant.jpg)
+- [Animated reference-to-catalog match demo](examples/media/demo.gif)
 - [Video walkthrough](examples/media/demo.mp4)
 
+The GIF and video show each uploaded reference beside a real catalog candidate photo.
 The photos are for reference-image demonstrations, not a price quote. Regenerate the
 walkthrough GIF and video with `python scripts\generate_sample_assets.py`.
 
