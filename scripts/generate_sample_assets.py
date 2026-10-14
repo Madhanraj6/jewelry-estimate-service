@@ -1,9 +1,10 @@
-"""Generate original synthetic jewelry images and an MP4 demo for the project.
+"""Generate synthetic catalog illustrations and reference-photo demo media.
 
 Run this in the project root with:
     python scripts/generate_sample_assets.py
 
-The generated images are illustrations for demos and offline testing, not product photos.
+The script uses the bundled owner-provided reference images under examples/media.
+Generated catalog images are illustrations for offline testing, not product photos.
 """
 
 from __future__ import annotations
@@ -111,14 +112,14 @@ def _rounded_card(frame: np.ndarray, top_left: tuple[int, int], bottom_right: tu
     cv2.rectangle(frame, top_left, bottom_right, (225, 229, 235), 2, cv2.LINE_AA)
 
 
-def _demo_frame(reference: np.ndarray, step: int) -> np.ndarray:
+def _demo_frame(reference: np.ndarray, step: int, item_type: str) -> np.ndarray:
     width, height = 1280, 720
     frame = np.full((height, width, 3), (247, 248, 251), dtype=np.uint8)
     cv2.putText(frame, "JEWELRY ESTIMATE SERVICE", (54, 68), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (70, 82, 98), 2, cv2.LINE_AA)
     captions = [
-        ("1. Add a reference", "Upload a product image and a short brief."),
-        ("2. Extract supported specs", "Vision models help identify visible product details."),
-        ("3. Match, then review", "A candidate is not a confirmed quote."),
+        ("Reference photo 1", "Ring"),
+        ("Reference photo 2", "Chain"),
+        ("Reference photo 3", "Pendant"),
     ]
     title, subtitle = captions[step]
     cv2.putText(frame, title, (54, 150), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (34, 50, 70), 3, cv2.LINE_AA)
@@ -127,11 +128,11 @@ def _demo_frame(reference: np.ndarray, step: int) -> np.ndarray:
     _rounded_card(frame, (626, 235), (1226, 646))
     preview = cv2.resize(reference, (450, 450), interpolation=cv2.INTER_AREA)
     frame[270:720, 94:544] = preview
-    cv2.putText(frame, "SYNTHETIC REFERENCE", (98, 616), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (100, 110, 125), 1, cv2.LINE_AA)
+    cv2.putText(frame, f"UPLOADED REFERENCE: {item_type.upper()}", (98, 616), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (100, 110, 125), 1, cv2.LINE_AA)
     details = [
-        (["Waiting for analysis", "No catalog guess is shown yet."], (110, 120, 132)),
-        (["Item type   ring", "Metal        gold", "Purity       18K", "Gemstone     diamond"], (45, 115, 75)),
-        (["Closest candidate: RNG-001", "Similarity: illustrative only", "Status: human review", "Catalog price is not a quote."], (45, 80, 145)),
+        ([f"Reference category: {item_type}", "Customer image shown as submitted.", "No extraction inferred here."], (45, 80, 145)),
+        (["Use with a short product brief.", "Model output is schema-validated.", "Unknowns stay explicitly unknown."], (45, 115, 75)),
+        (["Catalog candidates are ranked", "with deterministic scoring.", "Low confidence means review.", "Catalog base price is not a quote."], (45, 80, 145)),
     ]
     lines, color = details[step]
     for index, line in enumerate(lines):
@@ -141,7 +142,7 @@ def _demo_frame(reference: np.ndarray, step: int) -> np.ndarray:
     return frame
 
 
-def create_demo_video(reference: np.ndarray, output: Path) -> None:
+def create_demo_video(references: list[tuple[str, np.ndarray]], output: Path) -> None:
     width, height, fps = 1280, 720, 15
     writer = cv2.VideoWriter(
         str(output), cv2.VideoWriter_fourcc(*"mp4v"), fps, (width, height)
@@ -149,8 +150,8 @@ def create_demo_video(reference: np.ndarray, output: Path) -> None:
     if not writer.isOpened():
         raise RuntimeError("OpenCV could not initialize an MP4 encoder")
     try:
-        for step in range(3):
-            frame = _demo_frame(reference, step)
+        for step, (item_type, reference) in enumerate(references):
+            frame = _demo_frame(reference, step, item_type)
             for _ in range(30):
                 writer.write(frame)
     finally:
@@ -203,14 +204,18 @@ def _gif_image_data(frame: np.ndarray) -> bytes:
     return bytes(blocks)
 
 
-def create_demo_gif(reference: np.ndarray, output: Path) -> None:
+def create_demo_gif(references: list[tuple[str, np.ndarray]], output: Path) -> None:
     width, height = 480, 270
     header = bytearray(b"GIF89a")
     header.extend(struct.pack("<HHBBB", width, height, 0xF7, 0, 0))
     header.extend(_gif_palette())
     header.extend(b"\x21\xff\x0bNETSCAPE2.0\x03\x01\x00\x00\x00")
-    for step in range(3):
-        frame = cv2.resize(_demo_frame(reference, step), (width, height), interpolation=cv2.INTER_AREA)
+    for step, (item_type, reference) in enumerate(references):
+        frame = cv2.resize(
+            _demo_frame(reference, step, item_type),
+            (width, height),
+            interpolation=cv2.INTER_AREA,
+        )
         header.extend(b"\x21\xf9\x04\x00")
         header.extend(struct.pack("<H", 80))
         header.extend(b"\x00\x00")
@@ -284,16 +289,24 @@ def main() -> None:
         json.dumps({"entries": entries}, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
-    reference = draw_jewelry("ring", "gold", "diamond", seed=18)
-    reference_path = MEDIA_DIR / "reference-ring.png"
-    if not cv2.imwrite(str(reference_path), reference):
-        raise RuntimeError(f"Could not write {reference_path}")
+    reference_specs = [
+        ("ring", MEDIA_DIR / "reference-ring.jpg"),
+        ("chain", MEDIA_DIR / "reference-chain.jpg"),
+        ("pendant", MEDIA_DIR / "reference-pendant.jpg"),
+    ]
+    references = []
+    for item_type, path in reference_specs:
+        reference = cv2.imread(str(path), cv2.IMREAD_COLOR)
+        if reference is None:
+            raise FileNotFoundError(f"Required demo reference image is missing or unreadable: {path}")
+        references.append((item_type, reference))
+
     video_path = MEDIA_DIR / "demo.mp4"
-    create_demo_video(reference, video_path)
+    create_demo_video(references, video_path)
     gif_path = MEDIA_DIR / "demo.gif"
-    create_demo_gif(reference, gif_path)
+    create_demo_gif(references, gif_path)
     print(f"Generated {len(entries)} synthetic catalog illustrations in {IMAGE_DIR}")
-    print(f"Generated synthetic reference image: {reference_path}")
+    print(f"Using {len(references)} provided reference photos from {MEDIA_DIR}")
     print(f"Generated walkthrough GIF and video: {gif_path}, {video_path}")
 
 

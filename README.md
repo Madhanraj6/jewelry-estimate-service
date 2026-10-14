@@ -28,9 +28,9 @@ key, then:
 python scripts\build_catalog_index.py --force
 ```
 
-The demo photo, GIF, video, and bundled catalog illustrations are synthetic and generated
-for this project. Third-party product photos are not included in the public repository.
-Run `python scripts\generate_sample_assets.py` to regenerate the synthetic illustrations
+The demo references are owner-provided images; the iStock chain photo is redistributed
+under the project owner's license. Bundled catalog illustrations are synthetic. Run
+`python scripts\generate_sample_assets.py` to regenerate the synthetic illustrations
 and demo media. The result page displays the uploaded reference photo alongside the
 closest catalog candidate photo when those images are available.
 Without a multimodal API key, OpenCV estimates image components but does not identify
@@ -53,12 +53,12 @@ for the API documentation.
 
 ### Demo media
 
-- [Synthetic ring reference image](examples/media/reference-ring.png)
+- [Ring reference photo](examples/media/reference-ring.jpg)
+- [Chain reference photo](examples/media/reference-chain.jpg)
+- [Pendant reference photo](examples/media/reference-pendant.jpg)
 - [Video walkthrough](examples/media/demo.mp4)
 
-![Synthetic jewelry estimate walkthrough](examples/media/demo.gif)
-
-The media is synthetic demonstration content, not a customer photo or a price quote.
+The photos are for reference-image demonstrations, not a price quote.
 Regenerate the images, GIF, and video with `python scripts\generate_sample_assets.py`.
 
 ```powershell
