@@ -24,7 +24,9 @@ from .vision_verify import verify_candidates
 
 app = FastAPI(title="Jewelry Estimate Service", version="2.1.0")
 STATIC_DIR = Path(__file__).resolve().parent / "static"
+MEDIA_DIR = Path(__file__).resolve().parent.parent / "examples" / "media"
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+app.mount("/examples/media", StaticFiles(directory=MEDIA_DIR), name="example-media")
 
 #: Every catalog row is retrieved so that all of them receive a comparable semantic
 #: score. A SKU missing from the result set would otherwise be scored as "maximally

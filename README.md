@@ -50,6 +50,9 @@ uvicorn app.main:app --reload
 
 Open `http://127.0.0.1:8000/` for the browser frontend, or `http://127.0.0.1:8000/docs`
 for the API documentation.
+The home page shows sample ring, chain, and pendant photos; click one to load it into the
+reference-image field, then select **Analyze item** to see the uploaded and catalog photos
+alongside the estimate.
 
 ### Demo media
 
